@@ -1,0 +1,19 @@
+<h1>List of Strings:</h1>
+
+<div *ngFor = "let element of listOfStrings; let i = index" >
+    <p *ngIf = "i % 2 == 0" >{{element | titlecase }} </p>
+</div>
+
+<h1>List of Dates:</h1>
+
+<div *ngFor = "let element of listOfDates; let i = index" >
+    <p *ngIf = "i % 2 == 1" >{{element | date}} </p>
+</div>
+
+<h1>Adding hyphen at the begining and the end</h1>
+<p>{{ text | addHyphen }}</p>
+
+<h1 > Highlight text with random color!</h1>
+<div *ngFor = "let element of listOfStrings; let i = index" >
+    <p appHightlight >{{element | titlecase }} </p>
+</div>
